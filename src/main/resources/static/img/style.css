@@ -1,0 +1,155 @@
+/**
+  Name: Tareq Aziz
+  RNumber: 0917946
+ */
+
+#wishlist {
+    margin: 0;
+}
+body{
+    background: bisque;
+}
+.container {
+    margin-bottom: 50px;
+    padding: 10px 15px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style for the box title */
+.title {
+    font-size: 30px;
+    font-weight: 800;
+    color: lightseagreen;
+    text-align: center;
+}
+
+.input-field{
+    padding: 15px 20px;
+    background-color: lightcyan;
+    border: none;
+    border-radius: 6px;
+    color: darkslategray;
+    font-size: 16px;
+
+}
+.main-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-container a{
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: #f2f2f6;
+    color: seagreen;
+    font-weight: 900;
+    text-decoration: none;
+    border-radius: 8px;
+    width: 200px;
+
+}
+.link-container a:hover {
+    background-color: #ddd;
+}
+
+
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+}
+
+/* Style for form labels */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 900;
+}
+
+/* Style for form */
+input[type="text"] {
+    width: fit-content;
+    padding: 10px;
+    border-radius: 8px;
+    background: lightcyan;
+}
+
+/* Style for radio buttons */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Style for submit button */
+input[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: darkgreen;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Hover style for submit button */
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+select{
+    background: coral;
+    padding: 8px 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+li {
+    padding: 10px;
+    background-color: lightyellow;
+    margin-bottom: 6px;
+    border-radius: 8px;
+}
+
+
+li:hover {
+    background-color: #ddd;
+}
+
+
+li a {
+    text-decoration: none;
+    color: lightcoral;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: indianred;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* Hover style for the back button */
+.back-button:hover {
+    background-color: #ddd;
+}
+.success{
+    background-color: lightblue;
+    height: fit-content;
+    color: darkgreen;
+}
+.error{
+    color: red;
+    background-color: lightblue;
+}

@@ -1,0 +1,33 @@
+<!--
+  Name: Tareq Aziz
+  RNumber: 0917946
+-->
+
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add zoo</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/img/style.css}">
+</head>
+<body>
+
+    <form th:action="@{/zoo/details}">
+        <p>
+            <label for="zooName">Zoo name</label>
+            <input type="text" id="zooName" name="zooName">
+        </p>
+
+        <p>
+            <input type="submit" value="Confirm zoo">
+        </p>
+    </form>
+
+    <p>
+        <a class="back-button" th:href="@{/}">Back to home page</a>
+    </p>
+
+</body>
+</html>

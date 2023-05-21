@@ -1,0 +1,30 @@
+<!--
+  Name: Tareq Aziz
+  RNumber: 0917946
+-->
+
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoos list</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/img/style.css}">
+</head>
+<body>
+<h3>Zoos (and number of animal worlds):</h3>
+<ul>
+    <li th:each="zoo:${zoos}">
+        <a th:href="@{/animal-worlds/details(zooIndex=${zooStat.index})}"
+           th:text="${zoo.getName()}+' ('+${zoo.getNumberOfAnimalWorlds()}+')'" />
+    </li>
+
+</ul>
+<p>
+    <a class="back-button" th:href="@{/}">Back to home page</a>
+</p>
+
+</body>
+</html>

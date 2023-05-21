@@ -1,0 +1,55 @@
+<!--
+  Name: Tareq Aziz
+  RNumber: 0917946
+-->
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoo Project - Tareq</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/img/style.css}">
+
+</head>
+<body>
+   <div class="main-div">
+      <div>
+          <div class="container">
+              <h2 class="title">Zoo Project For Java <br>by Tareq Aziz</h2>
+          </div>
+          <form th:action="@{/animal-world/details}">
+              <div class="searchContainer">
+                  <input class="input-field" type="text" name="search" placeholder="Search for Animal World">
+                  <div class="search"></div>
+              </div>
+          </form>
+         <div class="link-container">
+             <p>
+                 <a th:href="@{/add/visitor}">New visitor</a><br>
+             </p>
+             <p>
+                 <a th:href="@{/add/staff}">New staff member</a>
+             </p>
+             <p>
+                 <a th:href="@{/staff-members/details}">List of staff members</a>
+             </p>
+             <p>
+                 <a th:href="@{/visitors/details}">List of visitors</a>
+             </p>
+             <p>
+                 <a th:href="@{/add/zoo}">New zoo</a>
+             </p>
+             <p>
+                 <a th:href="@{/zoo/details}">List of zoos</a>
+             </p>
+             <p>
+                 <a th:href="@{/add/animal-world}">New animal world</a>
+             </p>
+         </div>
+      </div>
+   </div>
+
+</body>
+</html>

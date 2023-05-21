@@ -1,0 +1,7 @@
+fact/it/zoo/model/Person.class
+fact/it/zoo/controller/MainController.class
+fact/it/zoo/StartFolderProjectZooApplication.class
+fact/it/zoo/model/AnimalWorld.class
+fact/it/zoo/model/Zoo.class
+fact/it/zoo/model/Staff.class
+fact/it/zoo/model/Visitor.class

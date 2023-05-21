@@ -1,0 +1,26 @@
+<!--
+  Name: Tareq Aziz
+  RNumber: 0917946
+-->
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Animal world list</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/img/style.css}">
+</head>
+<body>
+
+    <h2 th:text="'We found this animal world: '+${animalWorld.getName()}"></h2>
+    <p th:text="'Responsible: '+${animalWorld.getResponsible().getFirstName()}+' '+${animalWorld.getResponsible().getSurName()}"></p>
+    <img th:src="@{${animalWorld.getPhoto()}}" width="16%"/>
+
+    <p>
+        <a class="back-button" th:href="@{/}">Back to home page</a>
+    </p>
+
+
+</body>
+</html>

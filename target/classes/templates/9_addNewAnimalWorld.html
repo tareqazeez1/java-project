@@ -1,0 +1,59 @@
+<!--
+  Name: Tareq Aziz
+  RNumber: 0917946
+-->
+
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add animal world</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/img/style.css}">
+</head>
+<body>
+
+    <h3>New animal world</h3>
+    <form th:action="@{/animal-worlds/details}" th:object="${animalWorld}">
+        <p>
+            <label for="animalWorldName">Animal world name: </label>
+            <input type="text" id="animalWorldName" name="animalWorldName">
+        </p>
+        <p>
+            <label for="animalsNumber">Number of animals: </label>
+            <input type="text" id="animalsNumber" name="animalsNumber">
+        </p>
+
+        <p>
+            <label for="photo">Photo: </label>
+            <input type="text" id="photo" name="photo" placeholder="/img/image_name.jpg">
+        </p>
+
+        <p>
+            <select name="zooIndex">
+                <option value="-1">In which zoo?</option>
+                <option th:each="zoo: ${zoos}"
+                        th:text="${zoo.getName()}"
+                        th:value="${zooStat.index}"/>
+            </select>
+        </p>
+
+        <p>
+            <select name="staffMemberIndex">
+                <option value="-1">Who is responsible for this animal world?</option>
+                <option th:each="staffMember: ${staffMembers}"
+                        th:text="${staffMember.getFirstName()}+' '+${staffMember.getSurName()}"
+                        th:value="${staffMemberStat.index}"/>
+            </select>
+        </p>
+
+        <input type="submit" value="Confirm animal world">
+    </form>
+
+    <p>
+        <a class="back-button" th:href="@{/}">Back to home page</a>
+    </p>
+
+</body>
+</html>

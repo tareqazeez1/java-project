@@ -1,0 +1,43 @@
+<!--
+  Name: Tareq Aziz
+  RNumber: 0917946
+-->
+
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitors details</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/img/style.css}">
+</head>
+<body>
+<h3>Our visitors:</h3>
+<ol>
+    <li th:each="visitor:${visitors}">
+        <span th:text="${visitor.getFirstName()}+' '+${visitor.getSurName()}"></span>
+        <ul class="circle">
+            <li>
+                <span th:text="'year of birth: '+${visitor.getYearOfBirth()}"></span>
+            </li>
+            <li>
+                <span th:text="'zoo code: '+${visitor.getPersonalCode()}"></span>
+            </li>
+            <li>
+                <p id="wishlist" th:text="'Wish list: '">
+                    <ul class="square">
+                        <li th:each="animal:${visitor.getWishList()}" th:text="${animal}"></li>
+                    </ul>
+                </p>
+            </li>
+        </ul>
+    </li>
+</ol>
+<p>
+    <a class="back-button" th:href="@{/}">Back to home page</a>
+</p>
+
+</body>
+</html>

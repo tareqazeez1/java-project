@@ -1,0 +1,25 @@
+<!--
+  Name: Tareq Aziz
+  RNumber: 0917946
+-->
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff members details</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/img/style.css}">
+
+</head>
+<body>
+<h3>Our staff:</h3>
+    <div class="success">
+        <h1 th:each="staffmember:${staffmembers}" th:text="${staffmember}"></h1>
+    </div>
+<p>
+    <a class="back-button" th:href="@{/}">Back to home page</a>
+</p>
+
+</body>
+</html>
