@@ -13,33 +13,37 @@
 </head>
 <body>
 
-    <form th:action="@{/visitor/details}">
-        <p>
-            <label for="firstName">First name:</label>
-            <input type="text" id="firstName" name="firstName">
-        </p>
-        <p>
-            <label for="surName">Surname:</label>
-            <input type="text" id="surName" name="surName">
-        </p>
-        <p>
-            <label for="birthYear">Year of birth:</label>
-            <input type="text" id="birthYear" name="birthYear">
-        </p>
-        <p th:each="zoo:${zoos}">
-            <label th:for="${zooStat.index}" th:text="${zoo.getName()}"></label>
-            <input type="radio" name="zooIndex"
-                    th:value="${zooStat.index}"
-                    th:id="${zooStat.index}"
-                    th:checked="${zooStat.index}==0">
-        </p>
-        <p>
-            <input type="submit" value="Continue and generate personal code">
-        </p>
-    </form>
-    <p>
-        <a class="back-button" th:href="@{/}">Back to home page</a>
-    </p>
+   <div>
+       <form th:action="@{/visitor/details}">
+           <p>
+               <label for="firstName">First name:</label>
+               <input type="text" id="firstName" name="firstName">
+           </p>
+           <p>
+               <label for="surName">Surname:</label>
+               <input type="text" id="surName" name="surName">
+           </p>
+           <p>
+               <label for="birthYear">Year of birth:</label>
+               <input type="text" id="birthYear" name="birthYear">
+           </p>
+           <p th:each="zoo:${zoos}">
+               <label th:for="${zooStat.index}" th:text="${zoo.getName()}"></label>
+               <input type="radio" name="zooIndex"
+                      th:value="${zooStat.index}"
+                      th:id="${zooStat.index}"
+                      th:checked="${zooStat.index}==0">
+           </p>
+           <p>
+               <input type="submit" value="Continue and generate personal code">
+           </p>
+       </form>
+   </div>
+  <div>
+      <p>
+          <a class="back-button" th:href="@{/}">Back to home</a>
+      </p>
+  </div>
 
 
 </body>

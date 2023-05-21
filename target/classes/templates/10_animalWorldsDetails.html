@@ -14,26 +14,28 @@
 <body>
 
     <h3 th:text="'Animal worlds of '+${zoo.getName()}"></h3>
-    <ol>
-        <li th:each="animalWorld: ${zoo.getAnimalWorlds}">
-            <p th:text="${animalWorld.getName()}+' - responsible: '+${animalWorld.getResponsible().getFirstName()}+' '+${animalWorld.getResponsible().getSurName()}"></p>
-            <p th:text="'Number of animals: '+${animalWorld.getNumberOfAnimals()}"></p>
+    <div>
+        <ol>
+            <li th:each="animalWorld: ${zoo.getAnimalWorlds}">
+                <p th:text="${animalWorld.getName()}+' - responsible: '+${animalWorld.getResponsible().getFirstName()}+' '+${animalWorld.getResponsible().getSurName()}"></p>
+                <p th:text="'Number of animals: '+${animalWorld.getNumberOfAnimals()}"></p>
 
-            <th:block th:switch="${animalWorld.getPhoto()}">
-                <img th:case="'/img/aquarium.jpg'" th:src="@{${animalWorld.getPhoto()}}" width="9%"/>
-                <img th:case="'/img/birds.jpg'" th:src="@{${animalWorld.getPhoto()}}" width="9%"/>
-                <img th:case="'/img/hippotopia.jpg'" th:src="@{${animalWorld.getPhoto()}}" width="9%"/>
-                <img th:case="'/img/monkeys.jpg'" th:src="@{${animalWorld.getPhoto()}}" width="9%"/>
-                <img th:case="'/img/reptiles.jpg'" th:src="@{${animalWorld.getPhoto()}}" width="9%"/>
+                <th:block th:switch="${animalWorld.getPhoto()}">
+                    <img th:case="'/img/aquarium.jpg'" th:src="@{${animalWorld.getPhoto()}}" width="9%"/>
+                    <img th:case="'/img/birds.jpg'" th:src="@{${animalWorld.getPhoto()}}" width="9%"/>
+                    <img th:case="'/img/hippotopia.jpg'" th:src="@{${animalWorld.getPhoto()}}" width="9%"/>
+                    <img th:case="'/img/monkeys.jpg'" th:src="@{${animalWorld.getPhoto()}}" width="9%"/>
+                    <img th:case="'/img/reptiles.jpg'" th:src="@{${animalWorld.getPhoto()}}" width="9%"/>
 
-                <img th:case="*" th:src="@{/img/noimage.jpg}" width="9%"/>
-            </th:block>
+                    <img th:case="*" th:src="@{/img/noimage.jpg}" width="9%"/>
+                </th:block>
 
-        </li>
-    </ol>
+            </li>
+        </ol>
+    </div>
 
     <p>
-        <a class="back-button" th:href="@{/}">Back to home page</a>
+        <a class="back-button" th:href="@{/}">Back to home</a>
     </p>
 
 

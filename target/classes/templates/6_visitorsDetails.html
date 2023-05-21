@@ -15,28 +15,30 @@
 </head>
 <body>
 <h3>Our visitors:</h3>
-<ol>
-    <li th:each="visitor:${visitors}">
-        <span th:text="${visitor.getFirstName()}+' '+${visitor.getSurName()}"></span>
-        <ul class="circle">
-            <li>
-                <span th:text="'year of birth: '+${visitor.getYearOfBirth()}"></span>
-            </li>
-            <li>
-                <span th:text="'zoo code: '+${visitor.getPersonalCode()}"></span>
-            </li>
-            <li>
-                <p id="wishlist" th:text="'Wish list: '">
+<div>
+    <ol>
+        <li th:each="visitor:${visitors}">
+            <span th:text="${visitor.getFirstName()}+' '+${visitor.getSurName()}"></span>
+            <ul class="circle">
+                <li>
+                    <span th:text="'year of birth: '+${visitor.getYearOfBirth()}"></span>
+                </li>
+                <li>
+                    <span th:text="'zoo code: '+${visitor.getPersonalCode()}"></span>
+                </li>
+                <li>
+                    <p id="wishlist" th:text="'Wish list: '">
                     <ul class="square">
                         <li th:each="animal:${visitor.getWishList()}" th:text="${animal}"></li>
                     </ul>
-                </p>
-            </li>
-        </ul>
-    </li>
-</ol>
+                    </p>
+                </li>
+            </ul>
+        </li>
+    </ol>
+</div>
 <p>
-    <a class="back-button" th:href="@{/}">Back to home page</a>
+    <a class="back-button" th:href="@{/}">Back to home</a>
 </p>
 
 </body>

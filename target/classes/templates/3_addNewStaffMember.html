@@ -13,31 +13,33 @@
     <link rel="stylesheet" type="text/css" th:href="@{/img/style.css}">
 </head>
 <body>
-<form th:action="@{/staff-member/details}" th:object="${staff}">
-    <p>
-        <label for="firstName">First name </label>
-        <input type="text" id="firstName" name="firstName">
-    </p>
-    <p>
-        <label for="surName">Surname </label>
-        <input type="text" id="surName" name="surName">
-    </p>
-    <p>
-        <label for="employedSince">Employed since (dd/mm/yyyy) </label>
-        <input type="text" id="employedSince" name="employedSince">
-    </p>
-    <p>
-        <input type="checkbox" th:field="*{student}" id="student">
-        <label for="student">working student?</label>
-    </p>
-    <p>
-        <input type="submit" value="Confirm staff member">
-    </p>
+<div>
+    <form th:action="@{/staff-member/details}" th:object="${staff}">
+        <p>
+            <label for="firstName">First name </label>
+            <input type="text" id="firstName" name="firstName">
+        </p>
+        <p>
+            <label for="surName">Surname </label>
+            <input type="text" id="surName" name="surName">
+        </p>
+        <p>
+            <label for="employedSince">Employed since (dd/mm/yyyy) </label>
+            <input type="text" id="employedSince" name="employedSince">
+        </p>
+        <p>
+            <input type="checkbox" th:field="*{student}" id="student">
+            <label for="student">working student?</label>
+        </p>
+        <p>
+            <input type="submit" value="Confirm staff member">
+        </p>
 
 
-</form>
+    </form>
+</div>
 <p>
-    <a class="back-button" th:href="@{/}">Back to home page</a>
+    <a class="back-button" th:href="@{/}">Back to home</a>
 </p>
 
 

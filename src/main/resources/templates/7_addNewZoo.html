@@ -14,16 +14,18 @@
 </head>
 <body>
 
-    <form th:action="@{/zoo/details}">
-        <p>
-            <label for="zooName">Zoo name</label>
-            <input type="text" id="zooName" name="zooName">
-        </p>
+    <div>
+        <form th:action="@{/zoo/details}">
+            <p>
+                <label for="zooName">Zoo name</label>
+                <input type="text" id="zooName" name="zooName">
+            </p>
 
-        <p>
-            <input type="submit" value="Confirm zoo">
-        </p>
-    </form>
+            <p>
+                <input type="submit" value="Confirm zoo">
+            </p>
+        </form>
+    </div>
 
     <p>
         <a class="back-button" th:href="@{/}">Back to home page</a>

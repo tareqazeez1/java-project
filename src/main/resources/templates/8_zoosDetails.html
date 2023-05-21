@@ -15,15 +15,17 @@
 </head>
 <body>
 <h3>Zoos (and number of animal worlds):</h3>
-<ul>
-    <li th:each="zoo:${zoos}">
-        <a th:href="@{/animal-worlds/details(zooIndex=${zooStat.index})}"
-           th:text="${zoo.getName()}+' ('+${zoo.getNumberOfAnimalWorlds()}+')'" />
-    </li>
+<div>
+    <ul>
+        <li th:each="zoo:${zoos}">
+            <a th:href="@{/animal-worlds/details(zooIndex=${zooStat.index})}"
+               th:text="${zoo.getName()}+' ('+${zoo.getNumberOfAnimalWorlds()}+')'" />
+        </li>
 
-</ul>
+    </ul>
+</div>
 <p>
-    <a class="back-button" th:href="@{/}">Back to home page</a>
+    <a class="back-button" th:href="@{/}">Back to home</a>
 </p>
 
 </body>
